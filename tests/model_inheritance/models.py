@@ -76,7 +76,7 @@ class Thesis(Attachment):
     is_public = models.BooleanField(default=False)
 
     class Meta:
-        class_plural = "theses"
+        name_plural = "theses"
 
 
 #

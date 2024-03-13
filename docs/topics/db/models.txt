@@ -1105,7 +1105,7 @@ class (only), part of the value should contain ``'%(app_label)s'`` and either
   the field is used in.
 - ``'%(class_plural)s'`` is by default equivalent to ``'%(class)ss'``,
   but may be overridden in child models to support irregular plurals with the
-  :attr:`~django.db.models.Options.class_plural` Meta option.
+  :attr:`~django.db.models.Options.name_plural` Meta option.
 - ``'%(app_label)s'`` is replaced by the lowercased name of the app the child
   class is contained within. Each installed application name must be unique and
   the model class names within each app must also be unique, therefore the
@@ -1141,7 +1141,7 @@ Along with another app ``rare/models.py``::
 
     class ChildB(Base):
         class Meta:
-            class_plural = "children"
+            name_plural = "children"
 
 The reverse name of the ``common.ChildA.m2m`` field will be
 ``common_childa_related`` and the reverse query name will be ``common_childas``.
